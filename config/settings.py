@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/6.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -130,7 +131,6 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
-import os
 CORS_ALLOW_ALL_ORIGINS = True
 STATIC_URL = 'static/'
 
