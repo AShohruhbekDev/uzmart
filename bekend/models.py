@@ -1,0 +1,18 @@
+from django.db import models
+
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Product(models.Model):
+    rasm = models.ImageField(upload_to='media/', null=True)
+    narx = models.IntegerField()
+    skidka = models.IntegerField()
+    tavsif = models.CharField(max_length=80)
+    rate = models.FloatField(null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return self.tavsif
