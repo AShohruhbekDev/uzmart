@@ -142,6 +142,11 @@ REST_FRAMEWORK = {
     ],
 }
 STATIC_URL = '/static/'
+
+# Django statik fayllarni qayerdan yig'ib olishi (dist/assets uchun):
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'dist'), # React dist papkasi
+    os.path.join(BASE_DIR, 'dist'),
 ]
+
+# Render uchun statik fayllar saqlanadigan asosiy papka:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
